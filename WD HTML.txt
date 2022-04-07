@@ -1,0 +1,90 @@
+HTML
+      Html adalah HTML (Hypertext Markup Language) untuk konten dasar. HTML adalah bahasa markup yang menggunakan sintaks atau notasi khusus untuk menggambarkan struktur halaman web ke browser. Elemen HTML biasanya memiliki tag pembuka dan penutup yang mengelilingi dan memberi makna pada konten. Misalnya, elemen yang berbeda dapat mendeskripsikan teks sebagai judul, paragraph  atau item daftar. 
+Elemen-elemen dasar pada HTML:
+1.	<hx></hx> = terdapat h1-h6 = digunakan untuk mengatur ukuran huruf 
+2.	<p></p> = digunakan untuk membuat paragraph pada HTML
+3.	<!-- --> = digunakan untuk memberikan komentar pada program
+4.	<main></main> = digunakan sebagai mesin pencari dan pengembang lain menemukan konten utama halaman program
+5.	<img> = digunakan untuk memasukan gambar dari halaman yang sama maupun melalui eksternal link. Biasanya digunakan alt=”” untuk pembaca layar guna meningkatkan aksebilitas dan tampilan jika gambar gagal dimuat.
+6.	<br> = digunakan untuk memberikan garis baru
+7.	<hr> = memberikan garis horizontal yang bisa digunakan sebagai pembatas
+
+berikut ini merupakan dasar-dasar yang terdapat dalam HTML:
+A.	LINK
+      Link biasa digunakan untuk mengaitkan suatu gambar, video atau halaman HTML. dalam penggunaan link biasanya ada 3 jenis yang umum digunakan, antara lain:
+1.	Eksternal Link 
+Link yang didapat dari sebuah web yang ada di browser. Contoh, 
+<a href=https://www.youtube.com></a>
+2.	Internal Link 
+ link yang dikaitkan bila halaman yang dikaitkan terdapat dalam folder yang sama. misal, 
+<a href="HALAMAN2.html"></a>
+3.	Relative Link 
+link yang di hubungkan walaupun dalam tempat yang berbeda. Terdapat 2 kondisi,
+kondisi 1 = apabila halaman A berada diluar folder, sedangkan halaman B berada di dalam folder. Misal, <a href="../HALAMANB.html"></a>
+kondisi 2 = apabila halaman A berada di folder 1 dan B berada dalam folder 2. Misal, 
+<a href=”../2/B”></a>
+<a href=”../1/A”></a>
+4.	Page Anchor 
+Ink yang digunakan untuk menuju suatu halaman dalam web, didalam maupun diluar halaman. Misal, (lihat folder HMTL>HYPERLINK>Page anchor)
+B.	LIST 
+1.	List teracak 
+List yang digunakan untuk mengurutkan sesuatu secara teracak. Misal,
+<dl>
+	<dt>bagian 1</dt>
+	<dd>(kata-kata)</dd>
+	<dt>bagian 2</dt>
+	<dd>(kata-kata)</dd>
+</dl>
+2.	List terurut
+List yang digunaka untuk mengurutkan sesuatu secara beruntun. Terdapat 5 type pada list ini,yaitu 1, A, a, I, i. Misal,
+<ol>
+	<li>bangun jam 5 pagi</li>
+<li>membuat sarapan</li>
+	<li>mandi</li>
+	<li>solat subuh</li>
+</ol>
+3.	List unordered
+List yang tidak terpengaruh dengan setiap anggota list nya. Terdapat 3 tipe dalam list ini, yaitu disc, square, circle. Misal,
+<ul type="circle">
+	<li>es jeruk</li>
+	<li>teh manis</li>
+</ul>
+
+C.	FORM
+      Form digunakan untuk membuat formulir atau unsur-unsur yang ada didalam formulir. Dalam membuat formulir biasa digunakan perintah <input>. Contoh tipe yang ada pada input formulir adalah
+1.	Text
+Digunakan untuk membuat sebuah kolom yang dapat diisi seperti kolom nama.
+2.	Password
+Digunakan untuk membuat sebuah kolom yang digunakan untuk memasukan suatu sandi. 
+3.	Radio
+Digunakan untuk membuat banyak pilihan yang hanya bisa dipilih salah satu dari piihan tersebut.
+4.	Checkbox
+Digunakan untuk membuat banyak pilihan yang bisa dipilih lebih dari satu pilihan.
+
+      Selain perintah input, terdapat beberapa elemen yang bisa digunakan dalam membuat form, antara lain.
+a.	textarea= digunakan untuk membuat kolom yang digunakan sebagai kolom komentar. Misal, 
+<textarea></textarea>
+b.	Select = biasa digunakan untuk memilih dari banyak pilihan yang telah disediakan oleh form. Misal,
+<select>
+	<option>pilihan 1</option>
+	<option>pilihan 2</option>
+</select>
+c.	button = biasa digunakan untuk membuat tombol yang untuk sebuah perintah. Tipe dalam button antara lain, submit dan reset. Misal,
+<button type=”submit”></button>
+<button type=”reset”></button>
+
+D.	TABLE
+      Table dalam HTML biasa digunakan untuk membuat sebuah elemen tersusun dengan rapi didalam kolom-kolom yang terurut. Selain untuk mengatur posisi, table juga biasa digunakan untuk membuat data-data.  
+    Dalam  
+
+ Dalam table memiliki beberapa proprerti yang paling umum digunakan, amtara lain.
+1.	Border = biasa digunakan untuk mengatur tebal garis pinggir dalam table.
+2.	Cellspasing = jarak antara suatu cell dengan cell lainnya.
+3.	Cellpading = besar sebuah cell yang ada pada table 
+
+ 
+	
+
+
+      
+
