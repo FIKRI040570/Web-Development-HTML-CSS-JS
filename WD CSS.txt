@@ -1,0 +1,216 @@
+CSS
+CSS adalah cascading style sheet atau mekanisme sederhana yang mengatur gaya atau style dari sebuah halaman web.  Anatomi pada CSS berbentuk 
+selector {  property: value; } 
+selector = bagian dari CSS yang digunakan untuk memilih dan memanipulasi elemen spesifik pada HTML.
+property = 
+untuk mengetahui macam-macam property bisa kunjungi website berikut https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+atau
+https://css-tricks.com/alamac
+value = nilai dari sebuah property
+A.	JENIS-JENIS PROPERTY PADA PENGATURAN KATA
+1.	Font terbagi menjadi 
+•	font-family = untuk mengatur jenis font yang akan digunakan
+
+•	font-size = mengatur ukuran font
+•	font-weight = mengatur ketebalan font
+•	font-variant = mengubah font menjadi small caps
+•	font-style = mengubah font menjadi bercetak miring
+•	line-height = mengatur spasi antar baris
+
+2.	text-align: center; = untuk menempatkan huruf ditengah dan disamping
+text-align left, right, center dan justify
+3.	font-size: 40px; = untuk mengatur ukuran huruf
+4.	color: blue; = untuk mengatur warna pada teks  
+untuk pemilihan warna bisa diigunakan nama warna dalam b.inggris, hexacode warna (bisa dilihat di www.colorpicker.com) dan rgb (bisa dilihat di colorpicker juga)
+5.	text-indent = digunakan untuk memberikan jarak pada awal paragraph
+6.	text-transform = digunakan untuk memberikan huruf capital dan huruf kecil pada paragraph
+none, lowercase (huruf kecil semua), uppercase (huruf besar semua), capitalize (huruf besar hanya ada di awal)
+7.	text-decoration = none, underline (garis dibawah tulisan), overline(garis dibawah tulisan) dan line-through (garis yang mencoret tulisan)
+8.	letter-spacing = untuk mengatur jarak antar huruf = normal, px
+9.	word-spacing untuk mengatur jarak antar kata = normal, px
+
+
+B.	JENIS-JENIS BACKGROUND 
+1.	background-color = mengatur warna pada bg
+2.	background-image = mengatur gambar yang akan digunakan pada bg
+3.	background-position = mengatur posisi gambar pada bg = bisa diposisikan dengan bebas yang berotasi dengan sumbu x dan bisa juga dengan sumbu y, missal top right, right top dan masih banyak lagi
+ 
+4.	background-repeat = mengatur jenis pengulangan gambar pada bg = repeat-x, repeat-y dan no-repeat
+
+
+C.	JENIS-JENIS PENEMPATAN 
+1.	embed
+<style></style> = biasanya ditaruh setelah title pada head
+Contoh.
+<style>
+ 	h1 { 
+ 		color: lightblue;
+ 		text-align: center;
+ 		font-family: "arial";
+ 	 }
+ </style>
+
+2.	inline
+<p style=“color: blue;”>...</p> = biasanya dimasukan kedalam elemen HTML. Contoh.
+<p style="color: lightblue; font-family: arial;" >
+
+
+3.	external
+<link rel=”stylesheet” type=”text/css”href=”style.css”> memasukan css dari file atau folder yang berbeda.
+Contoh.
+Kita membuat file baru pada folder yang sama dengan html yang akan kita gunakan. File baru ini digunakan khusus untuk CSS
+.css
+h1 {
+	color: black;
+	font-family: algerian;
+	font-size: 20px;
+	text-align: center;
+}
+.html
+Tinggal kaitkan link antar file dengan menggunakan
+<title>CSS - DASAR</title>
+ <link rel="stylesheet" href="STYLE.css">
+Dan berlaku relative url jika file berada di folder yang berbeda.
+ 
+
+D.	SELECTOR
+Selector merupakan sesuatu yang digunakan untuk mengenali sebuah element HTML yang akan diberikan style.
+Selectors 
+-	elemen HTML
+-	id (menggunakan “#”)
+-	class (menggunakan “.”)
+-	complex selector 
+cara penggunaan selector pada elemen biasa contohnya.
+     h1, h2 {} (dimana “,” digunakan sebagai pembatas atau sebagai kata “dan”.
+Cara penggunaan selector pada sebuah elemen yang berada di dalam elemen lain. 
+    ul li (dimana li berada didalam elemen ul yang digunakan sebagai paragraph)
+selector juga dapat menggunakan type yang digunakan dalam elemen terebut. Misal, [type=’checkbox’]
+E.	PSEUDO CLASS
+     Pseudo class adalah kelas semu yang dimiliki oleh sebuah elemen HTML, yang membuat kita dapat mendifinisikan style pada “keadaan tertentu” dari elemen tersebut. 
+1.	Pseudo class yang berhubungan dengan link:
+-	link = style default pada sebuah link (a yang memiliki href)
+-	hover = style ketika kursor mouse berada diatas sebuah link/elemen
+-	active = style ketika sebuah link di-klik (keadaan aktif)
+-	visited = style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang sama) 
+cara penggunaan psudo classs tipe link adalah.
+.hello:(jenis psudo-class, dimana bagian yang dituju diberi nama class) {}
+2.	pseudo-class yang berhubungan dengan posisi elemen(1):
+-	first-child = memilih elemen pertama dari sebuah parent (elemen pembungkusnya)
+-	last-child = memilih elemen terakhir dari sebuah parent (elemen pembungkusnya)
+-	nth-child(n) = memilih elemen ke-n dari sebuah parent. n bisa berarti urutuan (1), (2),... atau pola (2n), (3n+2), (4n-1) atau ganjil dan genap (even & odd).
+
+3.	Pseudo-class yang berhubungan dengan posisi elemen(2):
+-	first-of-type = memilih elemen pertama dari sebuah jenis/tipe tag
+-	last-of-type = memilih elemen terakhir dari sebuah jenis/tipe tag
+
+
+F.	INHERITANCE
+     Inheritance adalah sebuah elemen mewarisi beberapa nilai dari properti yang dimiliki oleh elemen parent-nya. Property yang diwariskan yaitu sebagai berikut.
+-	color
+-	font
+-	letter-spacing
+-	list-style
+-	text-align
+-	text-indent
+-	text-transform
+-	visibility
+-	while-space
+
+
+G.	SPECIFICITY
+     Specificity adalah setiap deklarasi css (selector) memiliki berat yang berbeda. Berat tersebut menentukan seberapa spesifik sebuah elemen dapat dipilih oleh selector. Cara menghitung nilai specificity:
+0	0	0	0
+Inline	id	class	element
+     Dimana setiap ada 1 elemen, maka masukan kedalam hitungan diatas agar mengetahui berat suatu spesifik elemen. Contoh:
+#p1 = 0 1 0 0
+P      = 0 0 0 1
+     Maka, #p1 lebih berat dibandingkan dengan p. Agar suatu selector pada selector lebih berat dengan selector lainnya, harus dibuat selector itu tetap mentargetkan elemen yang dituju dengan menambahkan beratnya. Untuk cara menghitung berat nya dapat dilakukan secara manual dan dapat mengunjungi website http://specifity.keegan.st untuk kalkulator selector nya.
+
+
+H.	DISPLAY
+     Dalam display terdapat elemen  <div></div> dan <span></span>. Kedua tag ini tidak memiliki ‘arti’ apapun, keduanya digunakan untuk mengelompokan tag-tag HTML dan memberikan informasi terhadap tag-tag tersebut. Setiap tag pada HTML berada di dalam sebuah kotak. 
+     Property display pada css mengatur perilaku dari kotak tersebut. Setiap tag pada HTML memiliki nilai default untuk property display. Tetapi kita juga dapat mengubah perilaku dari tag tersebut dengan mengganti value-nya. Value pada display yaitu.
+a.	Inline 
+-	Elemen HTML yang secara default tidak menambahkan baris baru ketika dibuat
+-	Lebar dan tinggi elemennya sebesar konten yang ada di dalamnya 
+-	Kita tidak dapat mengatur tinggi (height) dan lebar (weight) dari elemen inline
+-	Margin dan padding hanya mempengaruhi elemen secara horizontal, tidak vertical
+Anggota elemen inline antara lain, b, strong, I , em, a, span, sub, sup, button, input, label, select, textarea dan masih banyak lagi. 
+b.	block
+-	elemen HTML yang secara default menambahkan baris baru ketika dibuat. 
+-	Jika tidak diatur lebarnya, maka lebar default dari elemen block akan memenuhi lebar dari browser/parent-nya
+-	Kita dapat mengatur tinggi dan lebar dari elemen block
+-	Di dalam elemen block, kita dapat menyimpan tag dengan elemen inline, inline-block, atau bahkan elemen block lagi. 
+Anggota elemen block antara lain, h1-h6, p, ol, ul, li, form, hr, div dan masih banyak lagi. 
+
+c.	Inline-block
+-	Tidak ada elemen yang secara default memiliki property display: inline-block;
+-	Kita harus mengubah secara manual properti tersebut
+-	zPerilaku dasarnya sama dengan elemen inline
+-	Perbedaanya, elemen inline-block dapat kita atur tinggi dan lebar-nya
+
+d.	None
+-	Digunakan untuk menghilangkan sebuah elemen
+
+I.	DIMENSI
+Dalam dimensi hanya terdapat 2 properti yaitu tinggi (height) dan lebar (weight). Selain px (pixel) terdapat beberapa lagi satuan, yaitu 
+-	px = dikenal dengan satuan absolute atau tetap
+-	% = dikenal sebagai satuan relative terhadap elemen parent-nya
+-	In, cm, mm, pt, pc = satuan dalam dunia nyata
+
+J.	OVERFLOW
+Digunakan untuk mengatur perilaku elemen yang keluar dari parent-nya. Ada 4 value dari property overflow, yaitu.
+-	visible = value default
+-	auto = akan menambahkan scroll ketika konten tidak cukup
+-	hidden = akan menghilangkan kata ketika konten tidak cukup lagi. 
+-	scroll = sama seperti auto namun ketika konten nya cukup scroll tidak hilang. 
+
+K.	BOX MODEL
+CSS box model mendefinisikan ‘kotak’ yang dihasilkan oleh sebuah elemen, lalu menampilkannya sesuai dengan format visualnya. 
+-	Setiap elemen di halaman berada di dalam sebuah box (kotak)
+-	Kita bisa mengatur ukuran dan posisi kotak tersebut
+-	Kita bisa memberi warna/gambar sebagai background kotak tersebut
+Dalam CSS box model terdiri dari.
+  
+1.	margin 
+      area transparan di sekitar kotak (diluar border). Cara penggunaan margin adalah bisa dengan menggunakan margin-(top, right, left, bottom). Dalam margin, terdapat overlapping marjin yang memiliki 2 kondisi, yaitu apabila saat keadaan vertikal, margin akan mengambil nilai yang paling besar jika ada 2 margin bertemu dan akan bertambah bila dalam keadaan horizontal. 
+     Margin juga dapat bernilai negatif yang akan mengurangi nilai margin pada posisi awal maupun bila bertemu dengan margin lainnya. Apabila suatu margin ingin diposisikan berada ditengah-tengah maka digunakan margin-(left dan right) dengan properti auto. 
+
+2.	padding 
+     area transparan di dalam kotak (antara content dan border). Padding sama seperti margin namun padding tidak dapat bernilai negative dan tidak memiliki nilai auto.  Padding juga menambahkan ukuran elemen. 
+
+3.	border
+ batas disekeliling content dan padding.  Cara penggunaan border adalah border: width style color;. Style yang bisa digunakan dalam border yaitu 
+
+
+border juga dapat mengubah ukuran dari konten sama seperti padding. Total dimensi = width/height + padding + border. Dalam border ada sebuah property khusus yang bisa digunakan untuk merapihkan bagian height (tinggi) yaitu 
+box-sizing: border-box;. 
+
+4.	content 
+konten sebenarnya di dalam box, bisa berupa teks atau gambar.
+
+
+L.	RESET
+     Reset digunakan untuk menghilangkan setingan awal suatu elemen pada HTML. misalnya pada hx, body, p dan masih banyak lagi. Dalam kebanyakan hal, reset digunakan untuk membuat kita mendapat kendali penuh pada website yang dibuat. Cara paling efektif dalam memberikan reset adalah dengan mengsalin sintaks dibawah ini. 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { 
+margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; } 
+
+ol, ul { list-style: none; } 
+
+blockquote, q { quotes: none; } 
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+
+
+M.	FLOAT
+     Float adalah properti pada CSS untuk mengatur posisi sebuah elemen. Sebuah elemen dapat dipaksa untuk berada di sebelah kiri atau kanan dari parent pembungkusnya dengan menggunakan properti ini. Value dalam elemen ini (none, left, right). Dalam dalam float ada normal flow dan out-of flow.  
+
+
