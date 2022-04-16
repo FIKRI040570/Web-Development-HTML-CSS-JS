@@ -1,2 +1,3 @@
-saya akan belajar javascript
-saya akan melanjutkan  freecodecamp saya hingga selesai bagian css
+saya akan menamatkan seri GIT&GITHUB dari channel pak dika
+saya akan melanjutkan freecodecamp saya hingga bagian akhir web responsive
+saya akan mulai mempelajari javascrip 
